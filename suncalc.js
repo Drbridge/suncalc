@@ -361,7 +361,7 @@ SunCalc.getGalaxyTimes = function (date, lat, lng, inUTC) {
     }
 
     var result = {};
-
+    if (rise && set) result.mid = hoursLater(t, (rise + set) / 2);
     if (rise) result.rise = hoursLater(t, rise);
     if (set) result.set = hoursLater(t, set);
 
